@@ -9,3 +9,5 @@ Steps:
 
 
 3. run main.py: python main.py
+
+4. find proxy_list that could approach your target website in TARGET_RESULT_FILE
