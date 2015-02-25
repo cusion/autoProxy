@@ -20,19 +20,19 @@ def initiate(clazz_path, *args, **kwargs):
     return getattr(mod, clazz)(*args, **kwargs)
 
 if __name__ == "__main__":
-#     webs = []
-#     for item in PROXY_WEBSITES:
-#         if item["used"]:
-#             webs.append(item)
-#     cdl = CountDownLatch(len(webs))
-#      
-#     for id, site in enumerate(webs):
-#         workingSpider = initiate(site["spider"], site["pages"])
-#         ProxyCrawler(id+1, workingSpider, cdl, CRAWLED_FILE_PREFIX).start()
-#          
-#     cdl.await()  # wait for those crawlers to get proxy_list
-#     print("===========================================")
-#     print("INFO: Crawler done!")
+    webs = []
+    for item in PROXY_WEBSITES:
+        if item["used"]:
+             webs.append(item)
+    cdl = CountDownLatch(len(webs))
+      
+    for id, site in enumerate(webs):
+        workingSpider = initiate(site["spider"], site["pages"])
+        ProxyCrawler(id+1, workingSpider, cdl, CRAWLED_FILE_PREFIX).start()
+          
+    cdl.await()  # wait for those crawlers to get proxy_list
+    print("===========================================")
+    print("INFO: Crawler done!")
     
     proxy_filter.start(THREADS_NUMBER, CRAWLED_FILE_PREFIX, TARGET_WEBSITES)
     print("INFO: Filter done!")
