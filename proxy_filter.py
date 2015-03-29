@@ -155,7 +155,7 @@ class TargetProxyFilter(object):
         #         print(url + " : could not connect using http proxy " + http_ip)
                 print(e)
                 count += 1
-        print("[IFNO]Failed " + str(count) + "/" + len(http_ips))
+        print("[IFNO]Failed " + str(count) + "/" + str(len(http_ips)))
         file.close()
         
 def start(threads, crawled_file_prefix, targets):

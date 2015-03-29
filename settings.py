@@ -8,7 +8,7 @@ PROXY_WEBSITES = [
                           {
                            "url" : "http://nntime.com/",
                            "used" : True,
-                           "pages" : 6,
+                           "pages" : 10,
                            "spider" : "free_proxy_crawler.nntimeSpider"
                           },
                           {
